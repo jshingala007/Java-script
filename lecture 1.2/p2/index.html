@@ -1,0 +1,40 @@
+Write a javascript Program to perform a swapping of two variables. (compulsory user
+input)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <table width="200" border="1" cellspacing="5"> 
+        <tr>
+            <td>A</td> 
+            <td id="a"></td>
+        </tr>
+
+        <tr>
+            <td>B</td>
+            <td id="b"></td>
+        </tr>
+    </table>
+
+    <script>
+        let a = prompt('Enter the first variable: ');
+        let b = prompt('Enter the second variable: ');
+
+        let swap;
+
+        swap = a;
+        a = b;
+        b = swap;
+
+        document.getElementById("a").innerHTML= a;
+        document.getElementById("b").innerHTML= b;
+    </script>
+    
+</body>
+</html>

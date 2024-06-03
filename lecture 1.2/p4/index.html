@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2 id ="grossal"></h2>
+    <script>
+           let sal =parseInt(prompt("enter your salary:"));
+           
+           let hra , da , ta ;
+           hra = 10*100/ sal;
+
+           da = 5*100/ sal;
+
+           ta = 8*100/ sal;
+           let gross;
+           gross = sal+da+ta+hra;
+           
+           document.getElementById("grossal").innerHTML=gross;
+
+    </script>
+
+</body>
+</html>
