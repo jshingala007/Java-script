@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+      function getDayOfWeek(dateString) {
+    const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const date = new Date(dateString);
+    const dayIndex = date.getDay();
+    return daysOfWeek[dayIndex];
+}
+
+
+const userInput = prompt("Enter a date (YYYY-MM-DD format):");
+
+
+const dayOfWeek = getDayOfWeek(userInput);
+
+s
+alert(`The day of the week for ${userInput} is ${dayOfWeek}.`);
+    </script>
+</body>
+</html>
