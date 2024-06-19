@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="green" style="border-radius: 30%; border-color: aquamarine; padding: 30px;">greeen</button>
+    <button id="red" style="border-radius: 30%; border-color: aquamarine; padding: 30px;">red</button>
+    <button id="yellow" style="border-radius: 30%; border-color: aquamarine; padding: 30px;">yellow</button>
+    <button id="blue" style="border-radius: 30%; border-color: aquamarine; padding: 30px;">blue</button>
+    <button id="pink" style="border-radius: 30%; border-color: aquamarine; padding: 30px;">pink</button>
+    <button id="black" style="border-radius: 30%; border-color: aquamarine; padding: 30px;">black</button>
+    <button id="brown" style="border-radius: 30%; border-color: aquamarine; padding: 30px;">brown</button>
+
+    <script>
+      
+        function clickHanger(color){
+            return function(){
+                document.body.style.backgroundColor=`${color}`;
+            }
+        }
+
+          document.getElementById("green").onclick=clickHanger("green");
+          document.getElementById("red").onclick=clickHanger("red");
+          document.getElementById("yellow").onclick=clickHanger("yellow");
+          document.getElementById("blue").onclick=clickHanger("blue");
+          document.getElementById("pink").onclick=clickHanger("pink");
+          document.getElementById("black").onclick=clickHanger("black");
+          document.getElementById("brown").onclick=clickHanger("brown");
+
+
+
+    </script>
+
+
+</body>
+</html>
