@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>company record</title>
+</head>
+
+<body>
+
+    <div align="center">
+        <h1 style="color:#e15f13;">Company Record</h1>
+        <table border="0" align="center" cellpadding="15" cellspacing="10" style="background-color:#797D7F ;">
+            <thead>
+                <tr>
+                    <td>Srno</td>
+                    <td>Name</td>
+                    <td>Email</td>
+                    <td>Phone</td>
+                    <td>City</td>
+                    <td>Salary</td>
+                    <td>Degi</td>
+                    <td>Dep</td>
+                </tr>
+            </thead>
+            <tbody id="empdata"></tbody>
+        </table>
+        <h1 id="total" style="text-align: center; color: #192226 ;"></h1>
+    </div>
+
+
+    <script type="text/javascript">
+        let record = [
+            {
+                id: 1,
+                name: "manju",
+                email: "manju@gmail.com",
+                phone: "70001",
+                city: "surat",
+                salary: 21000,
+                degi: "senior",
+                dep: "programming",
+            },
+            {
+                id: 2,
+                name: "sanju",
+                email: "sanju@gmail.com",
+                phone: "70002",
+                city: "surat",
+                salary: 22000,
+                degi: "junior",
+                dep: "ui/ux",
+            },
+            {
+                id: 3,
+                name: "raju",
+                email: "raju@gmail.com",
+                phone: "70003",
+                city: "vadodara",
+                salary: 25000,
+                degi: "junior",
+                dep: "bde",
+            },
+            {
+                id: 4,
+                name: "deepu",
+                email: "deepu@gmail.com",
+                phone: "70004",
+                city: "godhra",
+                salary: 30000,
+                degi: "tl",
+                dep: "webdesign",
+            },
+            {
+                id: 5,
+                name: "jayu",
+                email: "jayu@gmail.com",
+                phone: "77777",
+                city: "surat",
+                salary: 77777,
+                degi: "senior",
+                dep: "programming",
+            },
+            {
+                id: 6,
+                name: "ajayu",
+                email: "ajayu@gmail.com",
+                phone: "70007",
+                city: "vapi",
+                salary: 25000,
+                degi: "manager",
+                dep: "ui/ux",
+            }
+        ]
+        let total = 0;
+        let filterRecord = record.filter((val) => {
+            return val.dep === "programming" || val.city == "surat"
+        });
+        const getRecord = () => {
+            let tbl = "";
+            filterRecord.map((emp, index) => {
+                total = total + emp.salary;
+                tbl += `
+                    <tr>
+                        <td>${++index}</td> 
+                        <td>${emp.name}</td>    
+                        <td>${emp.email}</td>    
+                        <td>${emp.phone}</td>    
+                        <td>${emp.city}</td>    
+                        <td>${emp.salary}</td>    
+                        <td>${emp.degi}</td>    
+                        <td>${emp.dep}</td>    
+                    </tr>
+                `
+            })
+            document.getElementById('empdata').innerHTML = tbl;
+            document.getElementById('total').innerHTML = `Total Salary : ${total}`;
+        }
+        getRecord()
+
+
+
+    </script>
+
+
+</body>
+
+</html>
