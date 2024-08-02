@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(90deg, rgb(197, 125, 223) 0%, rgb(210, 205, 171) 100%);
+}
+
+div {
+    margin: 260px;
+    border: 1px black;
+    background-color: #4ed5f0;
+    display: inline-block;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+h1{
+    font-size: 40px;
+    color: #b661af;
+}
+
+h4{
+    margin-top: 40px;
+    font-size: 50px;
+}
+
+button{
+    margin-top: 30px;
+    margin-right: 10px;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+button:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+button#decrement{
+    background-color: #b1c5f5;
+}
+button#decrement:hover{
+    background-color: #1757eb;
+    color: #fff;
+}
+
+button#reset{
+    background-color: #f6a6a6;
+}
+button#reset:hover{
+    background-color: #f93737;
+    color: #fff;
+}
+
+button#increment{
+    background-color: #aedbbe;
+}
+button#increment:hover{
+    background-color: #049c39;
+    color: #fff;
+}
