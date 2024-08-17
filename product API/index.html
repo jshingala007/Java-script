@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product API</title>
+</head>
+
+<body>
+    <h2>Product API</h2>
+    <p id="id"></p>
+    <p id="title"></p>
+    <p id="description"></p>
+    <p id="category"></p>
+    <p id="price"></p>
+    <p id="discountPercentage"></p>
+    <p id="rating"></p>
+    <p id="stock"></p>
+    <p id="thumbnail"></p>
+
+    <button id="people" style="background-color: black; color: #fff; width: 160px; height: 50px; font-size: large;">
+        Random Clicks
+    </button>
+
+    <script>
+        // Sample product data
+        const products = [
+            {
+                "id": 1,
+                "title": "Essence Mascara Lash Princess",
+                "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects.",
+                "category": "beauty",
+                "price": 9.99,
+                "discountPercentage": 7.17,
+                "rating": 4.94,
+                "stock": 5,
+                "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/EssenceMascara/thumbnail.png"
+            },
+            {
+                "id": 2,
+                "title": "L'Oreal Lipstick",
+                "description": "L'Oreal Lipstick provides a long-lasting color and rich texture for all day wear.",
+                "category": "beauty",
+                "price": 14.99,
+                "discountPercentage": 5.00,
+                "rating": 4.80,
+                "stock": 10,
+                "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/LorealLipstick/thumbnail.png"
+            }
+            // Add more products as needed
+        ];
+
+        // Function that handles displaying the data on button click
+        function displayProduct() {
+            // Generate a random index to pick a random product
+            let productIndex = Math.floor(Math.random() * products.length);
+            const selectedProduct = products[productIndex];
+
+            // Displaying the product's properties in respective elements
+            document.getElementById("id").innerHTML = "Product ID: " + selectedProduct.id;
+            document.getElementById("title").innerHTML = "Title: " + selectedProduct.title;
+            document.getElementById("description").innerHTML = "Description: " + selectedProduct.description;
+            document.getElementById("category").innerHTML = "Category: " + selectedProduct.category;
+            document.getElementById("price").innerHTML = "Price: $" + selectedProduct.price;
+            document.getElementById("discountPercentage").innerHTML = "Discount Percentage: " + selectedProduct.discountPercentage + "%";
+            document.getElementById("rating").innerHTML = "Rating: " + selectedProduct.rating;
+            document.getElementById("stock").innerHTML = "Stock: " + selectedProduct.stock;
+            document.getElementById("thumbnail").innerHTML = `<img src="${selectedProduct.thumbnail}" alt="${selectedProduct.title} Thumbnail" />`;
+        }
+
+        // Adding event listener to the button to trigger the 'displayProduct' function
+        document.getElementById("people").addEventListener('click', displayProduct);
+    </script>
+</body>
+
+</html>
